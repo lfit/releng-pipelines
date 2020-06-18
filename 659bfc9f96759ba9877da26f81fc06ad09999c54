@@ -1,0 +1,169 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "47869a49_9902ebb7",
+        "filename": "build.gradle",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-06-18T14:39:37Z",
+      "side": 1,
+      "message": "Missing an SPDX header comment with the license",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "27c2a30e_9f4bb950",
+        "filename": "build.gradle",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-06-18T14:39:37Z",
+      "side": 1,
+      "message": "I know we\u0027re lifting this from EdgeX but we need to namespace it to ourselves and rebrand",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 61
+      },
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a0b630c9_b35ace73",
+        "filename": "resources/shell",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-06-18T14:39:37Z",
+      "side": 1,
+      "message": "Missing an SPDX comment header for license",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "9ea6e4ae_2e1f6fed",
+        "filename": "scripts/linter.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-06-18T14:39:37Z",
+      "side": 1,
+      "message": "Missing an SPDX comment header for license",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "6bb5bb92_c1f54e92",
+        "filename": "scripts/linter.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-06-18T14:39:37Z",
+      "side": 1,
+      "message": "I would perfer this not be hard coded by something that is picked up from the environment.",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5a7b6994_1aa793db",
+        "filename": "src/test/groovy/lfInfraShipLogsSpec.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-06-18T14:39:37Z",
+      "side": 1,
+      "message": "Missing SPDX license comment",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "10cec019_6559bcc7",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-06-18T14:39:37Z",
+      "side": 1,
+      "message": "We should stick an SPDX license comment in here as well",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "fc25328e_113f36a2",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-06-18T14:39:37Z",
+      "side": 1,
+      "message": "This doesn\u0027t appear to properly handle not having a Nexus the way our current global-jjb workflow does. We need to be able to gracefully not ship logs at all if no Nexus of S3 env vars are defined.",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 70
+      },
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "5f253666_c9f95cb1",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-06-18T14:39:37Z",
+      "side": 1,
+      "message": "We need to handle the following cases:\n\n1) Has nexus log shipping defined (this is the current case)\n2) Has S3 log shipping defined (this is missing)\n3) Has _no_ log shipping defined (this is missing)",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    }
+  ]
+}
