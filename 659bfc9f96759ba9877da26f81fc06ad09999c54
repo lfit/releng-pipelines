@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "dd9cd6fb_2aeb43a6",
+        "filename": "build.gradle",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-06-30T20:48:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "47869a49_9902ebb7",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "27c2a30e_9f4bb950",
         "filename": "build.gradle",
         "patchSetId": 1
@@ -42,6 +60,30 @@
     },
     {
       "key": {
+        "uuid": "39590d12_fc42be9b",
+        "filename": "build.gradle",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-06-30T20:48:27Z",
+      "side": 1,
+      "message": "Yup, this was one of the things I hadn\u0027t gotten around to by the time I pushed this. It\u0027s fixed now.",
+      "parentUuid": "27c2a30e_9f4bb950",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 61
+      },
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a0b630c9_b35ace73",
         "filename": "resources/shell",
         "patchSetId": 1
@@ -53,6 +95,24 @@
       "writtenOn": "2020-06-18T14:39:37Z",
       "side": 1,
       "message": "Missing an SPDX comment header for license",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "56160cbf_bef0a006",
+        "filename": "resources/shell",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-06-30T20:48:27Z",
+      "side": 1,
+      "message": "This is just a symlink.",
+      "parentUuid": "a0b630c9_b35ace73",
       "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
@@ -76,6 +136,24 @@
     },
     {
       "key": {
+        "uuid": "63c2371c_ec5c8d5d",
+        "filename": "scripts/linter.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-06-30T20:48:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "9ea6e4ae_2e1f6fed",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "6bb5bb92_c1f54e92",
         "filename": "scripts/linter.sh",
         "patchSetId": 1
@@ -90,6 +168,24 @@
       "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "69056e16_9c162250",
+        "filename": "scripts/linter.sh",
+        "patchSetId": 1
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-06-30T20:48:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "6bb5bb92_c1f54e92",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     },
     {
       "key": {
@@ -127,6 +223,24 @@
     },
     {
       "key": {
+        "uuid": "bfcd7ff0_2c3cc233",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 16,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-06-30T20:48:27Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "10cec019_6559bcc7",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "fc25328e_113f36a2",
         "filename": "vars/lfInfraShipLogs.groovy",
         "patchSetId": 1
@@ -150,6 +264,30 @@
     },
     {
       "key": {
+        "uuid": "af106539_8e7094c0",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-06-30T20:48:27Z",
+      "side": 1,
+      "message": "Done. The new version of this block will only take action if the S3_BUCKET or LOGS_SERVER are defined. It will also add the appropriate build description.",
+      "parentUuid": "fc25328e_113f36a2",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 70
+      },
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
         "uuid": "5f253666_c9f95cb1",
         "filename": "vars/lfInfraShipLogs.groovy",
         "patchSetId": 1
@@ -161,6 +299,24 @@
       "writtenOn": "2020-06-18T14:39:37Z",
       "side": 1,
       "message": "We need to handle the following cases:\n\n1) Has nexus log shipping defined (this is the current case)\n2) Has S3 log shipping defined (this is missing)\n3) Has _no_ log shipping defined (this is missing)",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "cfb843c5_06e849ab",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-06-30T20:48:27Z",
+      "side": 1,
+      "message": "See above comment.",
+      "parentUuid": "5f253666_c9f95cb1",
       "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
