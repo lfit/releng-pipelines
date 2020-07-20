@@ -1,0 +1,61 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7256d306_e42cdd51",
+        "filename": "src/test/groovy/lfInfraShipLogsSpec.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 38,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-07-20T16:14:43Z",
+      "side": 1,
+      "message": "My initial gut read of this tells me that you are not presently testing for all of the possible conditions:\n\n1) both nexus and s3 storage\n2) nexus storage but not s3 storage\n3) s3 storage but not nexus storage\n4) no log storage\n\nThis should be fixed before the fixes to code in lfInfraShipLogs.groovy (see my later code review)",
+      "revId": "d56260476481189ead029b7e82e1c7ca23e39941",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "906bd0b3_0e13dfab",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 55,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-07-20T16:14:43Z",
+      "side": 1,
+      "message": "buildDesc should start as \"No log storage defined, not storing logs remotely\"",
+      "revId": "d56260476481189ead029b7e82e1c7ca23e39941",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "075583ed_bd6ceea0",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 68,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-07-20T16:14:43Z",
+      "side": 1,
+      "message": "This is still wrong. We should handle for _both_ types deploy scenarios. This will happen when when a project is in transition from nexus to s3 deploys as we will want to do some side by side while we verify that logs are properly shipping during the conversion. Doing Nexus logs first would be my preference (to match what we\u0027re doing with global-jjb).\n\nIn addition, in both cases the buildDesc needs to be properly taken care of to handle both cases. Either, you default it above, like I mentioned, _or_ and maybe this is better, do a final check after both of these for an empty buildDesc and set it to the no log string at that time. If this is the selected method, then the storage handlers just need to appropriately extend the string ;)",
+      "range": {
+        "startLine": 57,
+        "startChar": 0,
+        "endLine": 68,
+        "endChar": 9
+      },
+      "revId": "d56260476481189ead029b7e82e1c7ca23e39941",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    }
+  ]
+}

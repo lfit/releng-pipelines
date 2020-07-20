@@ -84,6 +84,30 @@
     },
     {
       "key": {
+        "uuid": "909b1a48_4cc2bcbb",
+        "filename": "build.gradle",
+        "patchSetId": 1
+      },
+      "lineNbr": 9,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-07-20T16:14:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "39590d12_fc42be9b",
+      "range": {
+        "startLine": 7,
+        "startChar": 0,
+        "endLine": 9,
+        "endChar": 61
+      },
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "a0b630c9_b35ace73",
         "filename": "resources/shell",
         "patchSetId": 1
@@ -116,6 +140,24 @@
       "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "4265b1f3_a3a98652",
+        "filename": "resources/shell",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-07-20T16:14:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "56160cbf_bef0a006",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     },
     {
       "key": {
@@ -206,6 +248,24 @@
     },
     {
       "key": {
+        "uuid": "003f803b_046494fa",
+        "filename": "src/test/groovy/lfInfraShipLogsSpec.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-07-20T16:14:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "5a7b6994_1aa793db",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "10cec019_6559bcc7",
         "filename": "vars/lfInfraShipLogs.groovy",
         "patchSetId": 1
@@ -288,6 +348,30 @@
     },
     {
       "key": {
+        "uuid": "656d2d34_ebc776c7",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 67,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-07-20T16:14:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "af106539_8e7094c0",
+      "range": {
+        "startLine": 55,
+        "startChar": 0,
+        "endLine": 67,
+        "endChar": 70
+      },
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "5f253666_c9f95cb1",
         "filename": "vars/lfInfraShipLogs.groovy",
         "patchSetId": 1
@@ -320,6 +404,24 @@
       "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "2baff369_8255b5ff",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 78,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-07-20T16:14:43Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "cfb843c5_06e849ab",
+      "revId": "659bfc9f96759ba9877da26f81fc06ad09999c54",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     }
   ]
 }
