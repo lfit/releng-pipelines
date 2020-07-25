@@ -1,3 +1,4 @@
 # UUID                                                                              	Group Name
 #
+34a26f46de5578175a405ce54dc0bcef6d2bf1c5                                            	saml/lfinfra-gerrit-releng-pipelines-committers
 ldap:cn=lfinfra-gerrit-releng-pipelines-committers,ou=Groups,dc=freestandards,dc=org	ldap/lfinfra-gerrit-releng-pipelines-committers
