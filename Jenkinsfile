@@ -15,6 +15,8 @@
 // limitations under the License.
 //
 
+loadGlobalLibrary()
+
 pipeline {
     agent {
         label 'centos7-docker-4c-2g'
@@ -31,5 +33,52 @@ pipeline {
                 sh "./scripts/pipeline-linter.sh $JENKINS_URL"
             }
         }
+
+        stage('Gradle Tests') {
+            // agent {
+            //     docker {
+            //         image "gradle"
+            //         reuseNode true
+            //     }
+            // }
+            steps {
+                sh './gradlew clean test'
+
+                junit allowEmptyResults: true, testResults: 'target/test-results/test/*.xml'
+
+                // Test summary
+                publishHTML([
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'target/reports/tests/test',
+                    reportFiles: 'index.html',
+                    reportName: 'Unit Test Summary'
+                ])
+            }
+        }
     }
+
+    post {
+        failure {
+            script {
+                currentBuild.result = "FAILED"
+            }
+        }
+    }
+}
+
+def loadGlobalLibrary(branch = '*/master') {
+    library(identifier: 'pipelines@master',
+        retriever: legacySCM([
+            $class: 'GitSCM',
+            userRemoteConfigs: [[url: 'https://gerrit.linuxfoundation.org/infra/releng/pipelines']],
+            branches: [[name: branch]],
+            doGenerateSubmoduleConfigurations: false,
+            extensions: [[
+                $class: 'SubmoduleOption',
+                recursiveSubmodules: true,
+            ]]]
+        )
+    ) _
 }
