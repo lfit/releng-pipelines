@@ -15,6 +15,8 @@
 // limitations under the License.
 //
 
+loadGlobalLibrary()
+
 pipeline {
     agent {
         label 'centos7-docker-4c-2g'
@@ -25,11 +27,67 @@ pipeline {
         timeout(360)
     }
 
+    environment {
+        PYTHON = "python3"
+        TOX_DIR = "."
+        TOX_ENVS = ""
+    }
+
     stages {
         stage('Lint Pipelines') {
             steps {
                 sh "./scripts/pipeline-linter.sh $JENKINS_URL"
             }
         }
+
+        stage('Tox Tests') {
+            steps {
+                // Since these scripts are not all set with +x (due to being
+                // read into shell steps in global-jjb rather than executed
+                // directly), we have to read the files into the sh step.
+
+                // TODO: Replace with a tox-run library call once it is
+                // implemented.
+                sh readFile(file: "resources/shell/python-tools-install.sh")
+                sh readFile(file: "resources/shell/tox-install.sh")
+                sh readFile(file: "resources/shell/tox-run.sh")
+
+                junit allowEmptyResults: true,
+                    testResults: 'target/test-results/test/*.xml'
+
+                // Test summary
+                publishHTML([
+                    allowMissing: true,
+                    alwaysLinkToLastBuild: true,
+                    keepAll: true,
+                    reportDir: 'target/reports/tests/test',
+                    reportFiles: 'index.html',
+                    reportName: 'Unit Test Summary'
+                ])
+            }
+        }
     }
+
+    post {
+        failure {
+            script {
+                currentBuild.result = "FAILED"
+            }
+        }
+    }
+}
+
+def loadGlobalLibrary(branch = '*/master') {
+    library(identifier: 'pipelines@master',
+        retriever: legacySCM([
+            $class: 'GitSCM',
+            userRemoteConfigs: [[url: 'https://gerrit.linuxfoundation.org/infra/releng/pipelines']],
+            branches: [[name: branch]],
+            doGenerateSubmoduleConfigurations: false,
+            extensions: [[
+                $class: 'SubmoduleOption',
+                recursiveSubmodules: true,
+            ]]]
+        )
+    ) _
 }
