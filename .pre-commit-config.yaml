@@ -9,8 +9,3 @@ repos:
     rev: v0.13.1
     hooks:
       - id: gitlint
-
-  - repo: https://github.com/neuhalje/pre-commit-gradle.git
-    rev: v0.0.1
-    hooks:
-      - id: gradle-check
