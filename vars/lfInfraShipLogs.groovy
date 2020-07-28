@@ -25,5 +25,72 @@
  * @param body Config values to be provided in the form "key = value".
  */
 def call(body) {
-    // Stub, to be expanded in future commits
+    // Evaluate the body block and collect configuration into the object
+    def config = [:]
+
+    if(body) {
+        body.resolveStrategy = Closure.DELEGATE_FIRST
+        body.delegate = config
+        body()
+    }
+
+    def _logSettingsFile = config.logSettingsFile ?: 'jenkins-log-archives-settings'
+    if (!_logSettingsFile) {
+        throw new Exception('Log settings file id (logSettingsFile) is required for LF log deploy script.')
+    }
+
+    if (!("$S3_BUCKET" =~ /.*logs-s3.*/) && "$LOGS_SERVER" == "") {
+        echo "No LOGS_SERVER or valid S3_BUCKET defined. Skipping log shipping."
+    } else {
+        // SERVER_ID should always be "logs" when running create-netrc for log shipping
+        withEnv(["SERVER_ID=logs"]){
+            configFileProvider([configFile(fileId: _logSettingsFile, variable: 'SETTINGS_FILE')]) {
+                echo 'Running shell/create-netrc.sh'
+                sh(script: libraryResource('shell/create-netrc.sh'))
+            }
+
+            echo 'Running shell/python-tools-install.sh'
+            sh(script: libraryResource('shell/python-tools-install.sh'))
+            echo 'Running shell/sudo-logs.sh'
+            sh(script: libraryResource('shell/sudo-logs.sh'))
+            echo 'Running shell/job-cost.sh'
+            sh(script: libraryResource('shell/job-cost.sh'))
+
+            buildDesc = ""
+
+            if ("$S3_BUCKET" =~ /.*logs-s3.*/) {
+                // If S3_BUCKET is defined, we need the config file
+                configFileProvider([configFile(fileId: "jenkins-s3-log-ship",
+                                               targetLocation: '$HOME/.aws/credentials')]) {
+                    echo 'Running shell/logs-deploy.sh'
+                    sh(script: libraryResource('shell/logs-deploy.sh'))
+                }
+                s3_path = "logs/${SILO}/${JENKINS_HOSTNAME}/${JOB_NAME}/${BUILD_NUMBER}/"
+                buildDesc += "S3 build logs: <a href=\"https://$CDN_URL/$s3_path\"></a>\n"
+                // If LOGS_SERVER is also defined, logs-deploy.sh will deploy to both
+                if ("$LOGS_SERVER" != "") {
+                    nexus_path = "${SILO}/${JENKINS_HOSTNAME}/${JOB_NAME}/${BUILD_NUMBER}"
+                    buildDesc += "Nexus build logs: <a href=\"$LOGS_SERVER/$nexus_path\">$LOGS_SERVER/$nexus_path</a>\n"
+                }
+            } else {  // Only LOGS_SERVER is defined
+                echo 'Running shell/logs-deploy.sh'
+                sh(script: libraryResource('shell/logs-deploy.sh'))
+                nexus_path = "${SILO}/${JENKINS_HOSTNAME}/${JOB_NAME}/${BUILD_NUMBER}"
+                buildDesc += "Nexus build logs: <a href=\"$LOGS_SERVER/$nexus_path\">$LOGS_SERVER/$nexus_path</a>\n"
+            }
+
+            echo 'Running shell/logs-clear-credentials.sh'
+            sh(script: libraryResource('shell/logs-clear-credentials.sh'))
+        }
+
+        // Set build description with build logs and PR info if applicable
+        if (!currentBuild.description) {currentBuild.description = ''}
+
+        // the old GHPRB plugin updated the description to contain the PR # with a link to the PR.
+        // If the build description contains a link to the PR then add a br
+        if (currentBuild.description.contains('PR #')) {
+            currentBuild.description += "<br>"
+        }
+        currentBuild.description += buildDesc
+    }
 }
