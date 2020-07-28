@@ -1,5 +1,7 @@
 target
 .gradle
+# We do not want to store binary objects in this repo
+gradle/wrapper/gradle-wrapper.jar
 
 # Created by https://www.gitignore.io/api/gradle,eclipse,intellij
 # Edit at https://www.gitignore.io/?templates=gradle,eclipse,intellij
