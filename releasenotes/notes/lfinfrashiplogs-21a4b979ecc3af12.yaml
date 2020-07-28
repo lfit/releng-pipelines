@@ -1,0 +1,7 @@
+---
+prelude: >
+    First release of the Linux Foundation's Jenkins pipeline library.
+features:
+  - |
+    lfInfraShipLogs, which implements log shipping as seen in global-jjb. This
+    includes S3 shipping, Nexus shipping, and job cost data.
