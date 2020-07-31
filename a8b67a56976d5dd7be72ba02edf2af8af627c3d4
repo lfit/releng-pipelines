@@ -19,6 +19,24 @@
     },
     {
       "key": {
+        "uuid": "9957fa00_f33b0224",
+        "filename": "build.gradle",
+        "patchSetId": 4
+      },
+      "lineNbr": 41,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-07-31T18:52:39Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "95c046eb_0b9867d9",
+      "revId": "a8b67a56976d5dd7be72ba02edf2af8af627c3d4",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "d20a57d5_6ba7743a",
         "filename": "build.gradle",
         "patchSetId": 4
@@ -39,6 +57,30 @@
       "revId": "a8b67a56976d5dd7be72ba02edf2af8af627c3d4",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "74dbbf7c_98c99244",
+        "filename": "build.gradle",
+        "patchSetId": 4
+      },
+      "lineNbr": 43,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-07-31T18:52:39Z",
+      "side": 1,
+      "message": "No, they aren\u0027t available in maven central or bintray. But I was able to reduce it just to the \"public\" repo.",
+      "parentUuid": "d20a57d5_6ba7743a",
+      "range": {
+        "startLine": 42,
+        "startChar": 0,
+        "endLine": 43,
+        "endChar": 52
+      },
+      "revId": "a8b67a56976d5dd7be72ba02edf2af8af627c3d4",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     },
     {
       "key": {
