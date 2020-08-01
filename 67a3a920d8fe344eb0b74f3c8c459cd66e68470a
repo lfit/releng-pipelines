@@ -154,6 +154,24 @@
     },
     {
       "key": {
+        "uuid": "2b772a40_9d12734b",
+        "filename": "gradlew",
+        "patchSetId": 5
+      },
+      "lineNbr": 1,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-08-01T21:20:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "9d166470_a03cb2c0",
+      "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "cd654fa9_ab00932c",
         "filename": "gradlew",
         "patchSetId": 5
@@ -168,6 +186,24 @@
       "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "a2faff4b_d3cffdf8",
+        "filename": "gradlew",
+        "patchSetId": 5
+      },
+      "lineNbr": 32,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-08-01T21:20:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "cd654fa9_ab00932c",
+      "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     },
     {
       "key": {
@@ -188,6 +224,24 @@
     },
     {
       "key": {
+        "uuid": "8e8d3412_0d13df07",
+        "filename": "gradlew",
+        "patchSetId": 5
+      },
+      "lineNbr": 70,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-08-01T21:20:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "3baef1a5_4e1443b9",
+      "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e9ec2973_6ef797f5",
         "filename": "gradlew",
         "patchSetId": 5
@@ -202,6 +256,24 @@
       "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "42ce74ad_cb2cd22d",
+        "filename": "gradlew",
+        "patchSetId": 5
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-08-01T21:20:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "e9ec2973_6ef797f5",
+      "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     },
     {
       "key": {
@@ -228,6 +300,30 @@
     },
     {
       "key": {
+        "uuid": "d0f0943b_6b018ec0",
+        "filename": "gradlew",
+        "patchSetId": 5
+      },
+      "lineNbr": 131,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-08-01T21:20:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "e71f3c7d_ac6efe96",
+      "range": {
+        "startLine": 131,
+        "startChar": 4,
+        "endLine": 131,
+        "endChar": 17
+      },
+      "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "e5bdca75_6eaa46b0",
         "filename": "gradlew",
         "patchSetId": 5
@@ -242,6 +338,24 @@
       "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "108c7b83_6ec47d36",
+        "filename": "gradlew",
+        "patchSetId": 5
+      },
+      "lineNbr": 140,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-08-01T21:20:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "e5bdca75_6eaa46b0",
+      "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     },
     {
       "key": {
@@ -268,6 +382,30 @@
     },
     {
       "key": {
+        "uuid": "7abf13e5_da9748fd",
+        "filename": "gradlew",
+        "patchSetId": 5
+      },
+      "lineNbr": 160,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-08-01T21:20:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "59691fc2_14b0719b",
+      "range": {
+        "startLine": 149,
+        "startChar": 0,
+        "endLine": 160,
+        "endChar": 8
+      },
+      "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "f6534fc4_565ba736",
         "filename": "gradlew",
         "patchSetId": 5
@@ -285,6 +423,24 @@
     },
     {
       "key": {
+        "uuid": "8d4571f6_d278e4a4",
+        "filename": "gradlew",
+        "patchSetId": 5
+      },
+      "lineNbr": 171,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-08-01T21:20:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "f6534fc4_565ba736",
+      "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
+    },
+    {
+      "key": {
         "uuid": "1043a924_e7123fb8",
         "filename": "gradlew",
         "patchSetId": 5
@@ -299,6 +455,24 @@
       "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "1555470c_9e42c4d2",
+        "filename": "gradlew",
+        "patchSetId": 5
+      },
+      "lineNbr": 173,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-08-01T21:20:26Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "1043a924_e7123fb8",
+      "revId": "67a3a920d8fe344eb0b74f3c8c459cd66e68470a",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     },
     {
       "key": {

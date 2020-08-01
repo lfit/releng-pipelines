@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "1f1607a5_66edb27b",
+        "filename": "tox.ini",
+        "patchSetId": 8
+      },
+      "lineNbr": 3,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2020-08-01T21:20:26Z",
+      "side": 1,
+      "message": "Why the removal of the docs jobs / environments?",
+      "revId": "2f44b1365108fb4fbc10f6ea1efa0f75eec5f1f9",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    }
+  ]
+}
