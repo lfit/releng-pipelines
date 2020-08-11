@@ -16,6 +16,24 @@
       "revId": "f42b13a87eee5f0c380f9db7bf71c7078e21d68b",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "22fbbbcb_f772241a",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 17
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-08-11T18:21:34Z",
+      "side": 1,
+      "message": "Hmmm, that is a bit of a confusing comment. It\u0027s not incorrect, it\u0027s just more of a block header than it is a description of the line directly below it. In the current patch, that comment describes everything that\u0027s happening between lines 91-98. I can definitely clean that up.",
+      "parentUuid": "c585d199_7f6733d5",
+      "revId": "f42b13a87eee5f0c380f9db7bf71c7078e21d68b",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
     }
   ]
 }
