@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "c585d199_7f6733d5",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 17
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 15
+      },
+      "writtenOn": "2020-08-11T18:00:59Z",
+      "side": 1,
+      "message": "The comment above implies this is supposed to be doing something more than setting the description to an empty string, and I don\u0027t see any setting of the log link?",
+      "revId": "f42b13a87eee5f0c380f9db7bf71c7078e21d68b",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    }
+  ]
+}
