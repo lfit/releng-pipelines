@@ -34,6 +34,24 @@
       "revId": "f42b13a87eee5f0c380f9db7bf71c7078e21d68b",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "27319224_048d5794",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 17
+      },
+      "lineNbr": 91,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2020-08-11T18:30:41Z",
+      "side": 1,
+      "message": "I decided to just pull it entirely. It\u0027s fairly obvious what the function of that single line is, and that comment predated when I moved the build description into its own variable that\u0027s being set above (when it was just Nexus logs shipping, the currentBuild.description was set directly in the below code, with no intermediary variable).",
+      "parentUuid": "22fbbbcb_f772241a",
+      "revId": "f42b13a87eee5f0c380f9db7bf71c7078e21d68b",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     }
   ]
 }
