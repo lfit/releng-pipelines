@@ -1,0 +1,8 @@
+Verified+1: EdgeX Jenkins <releng+edgex-jenkins@linuxfoundation.org>
+Code-Review+1: Daniel Pono Takamori <dtakamori@contractor.linuxfoundation.org>
+Code-Review+2: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-by: Andrew Grimberg <agrimberg@linuxfoundation.org>
+Submitted-at: Wed, 12 Aug 2020 17:33:45 +0000
+Reviewed-on: https://gerrit.linuxfoundation.org/infra/c/releng/pipelines/+/64798
+Project: releng/pipelines
+Branch: refs/heads/master
