@@ -35,8 +35,16 @@ for JENKINS_FILE in "${JENKINS_FILE_LIST[@]}"
 do
     ret=$(curl --silent -X POST -H $JENKINS_CRUMB -F "jenkinsfile=<$JENKINS_FILE" $JENKINS_VAL)
     if [[ $ret == *"Errors"* ]];then
-        echo "Linting error for $JENKINS_FILE"
+        echo "ERROR: Linting error for $JENKINS_FILE"
         echo $ret
+        exit_code=1
+    # Check for the line "agent any". This is the only valid way to allow
+    # the pipeline to use master
+    elif grep "^\s*agent any" "$JENKINS_FILE"; then
+        echo "ERROR: $JENKINS_FILE is set to use any agent. Please specify a label instead."
+        exit_code=1
+    elif grep -Pz "agent\s*\{\s*(label|node)\s+['\"]*master" "$JENKINS_FILE"; then
+        echo "ERROR: $JENKINS_FILE is set to use master as an agent. Please specify a different label."
         exit_code=1
     else
         echo "$JENKINS_FILE successfully validated"
