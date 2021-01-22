@@ -1,0 +1,9 @@
+---
+features:
+  - |
+    New global var lfParallelCostCapture. This is a function to be run as a
+    "post" call at the end of each stage within a parallel block, which will
+    gather cost data from dynamically-allocated build nodes. It outputs a file
+    titled "stack-cost" and stashes it. lfInfraShipLogs has been modified to
+    unstash this file, which will automatically be picked up by the job-cost.sh
+    script.
