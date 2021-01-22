@@ -55,6 +55,13 @@ def call(body) {
             sh(script: libraryResource('shell/python-tools-install.sh'))
             echo 'Running shell/sudo-logs.sh'
             sh(script: libraryResource('shell/sudo-logs.sh'))
+
+            // Check for stashed "stack-cost" file, used to get cost data from
+            // parallel builds.
+            try {
+                unstash "stack-cost"
+            } catch(Exception e) {}
+
             echo 'Running shell/job-cost.sh'
             sh(script: libraryResource('shell/job-cost.sh'))
 
