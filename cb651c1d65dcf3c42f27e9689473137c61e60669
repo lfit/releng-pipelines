@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "key": {
+        "uuid": "7f9484c9_36cd6e17",
+        "filename": "vars/lfParallelCostCapture.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-02-12T00:28:22Z",
+      "side": 1,
+      "message": "Reading the docs on this, it makes me think that this is going to be global across all jobs which might cause contention issues.\n\nIs there a way to get the primary job name and encode that into the lock resource?\n\nSay something like:\n\nlock(\"$jobname-stack-cost\") {...}",
+      "revId": "cb651c1d65dcf3c42f27e9689473137c61e60669",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": true
+    }
+  ]
+}
