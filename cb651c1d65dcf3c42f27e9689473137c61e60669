@@ -34,6 +34,24 @@
       "revId": "cb651c1d65dcf3c42f27e9689473137c61e60669",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": false
+    },
+    {
+      "key": {
+        "uuid": "62f86bfb_3dfb3841",
+        "filename": "vars/lfParallelCostCapture.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-02-12T18:40:10Z",
+      "side": 1,
+      "message": "Great!",
+      "parentUuid": "8832b484_00771bab",
+      "revId": "cb651c1d65dcf3c42f27e9689473137c61e60669",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     }
   ]
 }
