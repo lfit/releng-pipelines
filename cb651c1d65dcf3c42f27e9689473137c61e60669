@@ -16,6 +16,24 @@
       "revId": "cb651c1d65dcf3c42f27e9689473137c61e60669",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
       "unresolved": true
+    },
+    {
+      "key": {
+        "uuid": "8832b484_00771bab",
+        "filename": "vars/lfParallelCostCapture.groovy",
+        "patchSetId": 5
+      },
+      "lineNbr": 22,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2021-02-12T18:38:15Z",
+      "side": 1,
+      "message": "As discussed, I changed the lock name to be \"${BUILD_TAG}-stack-cost\". Testing confirms that this works as intended, giving the lock a name that will be unique to each job and build.",
+      "parentUuid": "7f9484c9_36cd6e17",
+      "revId": "cb651c1d65dcf3c42f27e9689473137c61e60669",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09",
+      "unresolved": false
     }
   ]
 }
