@@ -19,7 +19,7 @@ def call() {
     sh(script: libraryResource('shell/job-cost.sh'))
     cost_str = sh(script: "cat $WORKSPACE/archives/cost.csv | cut -d, -f6", returnStdout: true)
 
-    lock("${BUILD-TAG}-stack-cost") {
+    lock("${BUILD_TAG}-stack-cost") {
         try {
             unstash "stack-cost"
             stack_cost = sh(script: "cat stack-cost | awk '{print \$2}", returnStdout: true)
