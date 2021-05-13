@@ -51,8 +51,7 @@ def call(body) {
                 sh(script: libraryResource('shell/create-netrc.sh'))
             }
 
-            echo 'Running shell/python-tools-install.sh'
-            sh(script: libraryResource('shell/python-tools-install.sh'))
+            lfCommon.installPythonTools()
             echo 'Running shell/sudo-logs.sh'
             sh(script: libraryResource('shell/sudo-logs.sh'))
 
