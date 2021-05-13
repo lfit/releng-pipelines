@@ -1,0 +1,7 @@
+---
+features:
+  - |
+    The lfJava global var introduces functionality equivalent to the global-jjb
+    jobs for maven-verify, maven-merge, and maven-stage. This will test new
+    patch/pull requests, test and deploy artifacts upon merge, and stage artifacts
+    for release.

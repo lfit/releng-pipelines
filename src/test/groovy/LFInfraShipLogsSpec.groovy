@@ -23,7 +23,7 @@ public class LFInfraShipLogsSpec extends JenkinsPipelineSpecification {
 
     def setup() {
         lfInfraShipLogs = loadPipelineScriptForTest('vars/lfInfraShipLogs.groovy')
-        explicitlyMockPipelineVariable('out')
+        explicitlyMockPipelineVariable('lfCommon')
     }
 
     def "Test lfInfraShipLogs [Should] throw exception [When] logSettingsFile is null" () {
@@ -46,9 +46,6 @@ public class LFInfraShipLogsSpec extends JenkinsPipelineSpecification {
             getPipelineMock("libraryResource")('shell/create-netrc.sh') >> {
                 return 'create-netrc'
             }
-            getPipelineMock("libraryResource")('shell/python-tools-install.sh') >> {
-                return 'python-tools-install'
-            }
             getPipelineMock("libraryResource")('shell/sudo-logs.sh') >> {
                 return 'sudo-logs'
             }
@@ -61,6 +58,7 @@ public class LFInfraShipLogsSpec extends JenkinsPipelineSpecification {
             getPipelineMock("libraryResource")('shell/logs-clear-credentials.sh') >> {
                 return 'logs-clear-credentials'
             }
+            getPipelineMock("lfCommon.installPythonTools").call(_) >> null
         when: 'Only LOGS_SERVER defined'
             lfInfraShipLogs.getBinding().setVariable('LOGS_SERVER', 'MyLogServer')
             lfInfraShipLogs.getBinding().setVariable('S3_BUCKET', '')
@@ -76,7 +74,6 @@ public class LFInfraShipLogsSpec extends JenkinsPipelineSpecification {
                 assert envArgs == _arguments[0][0]
             }
             1 * getPipelineMock('sh').call([script:'create-netrc'])
-            1 * getPipelineMock('sh').call([script:'python-tools-install'])
             1 * getPipelineMock('sh').call([script:'sudo-logs'])
             1 * getPipelineMock('sh').call([script:'job-cost'])
             1 * getPipelineMock('sh').call([script:'logs-deploy'])
@@ -97,7 +94,6 @@ public class LFInfraShipLogsSpec extends JenkinsPipelineSpecification {
                 assert envArgs == _arguments[0][0]
             }
             1 * getPipelineMock('sh').call([script:'create-netrc'])
-            1 * getPipelineMock('sh').call([script:'python-tools-install'])
             1 * getPipelineMock('sh').call([script:'sudo-logs'])
             1 * getPipelineMock('sh').call([script:'job-cost'])
             1 * getPipelineMock('sh').call([script:'logs-deploy'])
@@ -118,7 +114,6 @@ public class LFInfraShipLogsSpec extends JenkinsPipelineSpecification {
                 assert envArgs == _arguments[0][0]
             }
             1 * getPipelineMock('sh').call([script:'create-netrc'])
-            1 * getPipelineMock('sh').call([script:'python-tools-install'])
             1 * getPipelineMock('sh').call([script:'sudo-logs'])
             1 * getPipelineMock('sh').call([script:'job-cost'])
             1 * getPipelineMock('sh').call([script:'logs-deploy'])
@@ -141,7 +136,6 @@ public class LFInfraShipLogsSpec extends JenkinsPipelineSpecification {
                 assert envArgs == _arguments[0][0]
             }
             0 * getPipelineMock('sh').call([script:'create-netrc'])
-            0 * getPipelineMock('sh').call([script:'python-tools-install'])
             0 * getPipelineMock('sh').call([script:'sudo-logs'])
             0 * getPipelineMock('sh').call([script:'job-cost'])
             0 * getPipelineMock('sh').call([script:'logs-deploy'])
