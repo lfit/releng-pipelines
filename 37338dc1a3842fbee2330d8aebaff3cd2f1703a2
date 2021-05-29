@@ -1,0 +1,78 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "55e3d327_182b882e",
+        "filename": "/COMMIT_MSG",
+        "patchSetId": 2
+      },
+      "lineNbr": 7,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-05-29T14:13:02Z",
+      "side": 1,
+      "message": "Subject should be:\n\nFeat: Add initial Java pipeline functionality\n\nThis reminds / tells me that we need to get all the new pre-commit bits into this repo ;)",
+      "revId": "37338dc1a3842fbee2330d8aebaff3cd2f1703a2",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "0c9524f5_1a458027",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-05-29T14:13:02Z",
+      "side": 1,
+      "message": "A couple of things plus I don\u0027t see any documentation.\n\nIf we\u0027re supposed to be auto-building the docs somehow from code comments, then your javadoc feels lacking ;)",
+      "revId": "37338dc1a3842fbee2330d8aebaff3cd2f1703a2",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a910f192_b7b6f938",
+        "filename": "vars/lfCommon.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 37,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-05-29T14:13:02Z",
+      "side": 1,
+      "message": "Please make a Jira card for this todo. When done, please reply to this message with the card info and mark resolved",
+      "revId": "37338dc1a3842fbee2330d8aebaff3cd2f1703a2",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "a1fec336_cd81f883",
+        "filename": "vars/lfJava.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-05-29T14:13:02Z",
+      "side": 1,
+      "message": "Please make a Jira card for this todo. When done, please reply to this message with the card info and mark resolved",
+      "range": {
+        "startLine": 73,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 22
+      },
+      "revId": "37338dc1a3842fbee2330d8aebaff3cd2f1703a2",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
