@@ -39,6 +39,30 @@
       },
       "revId": "69265fb5536f70336d6cacbe50b235edbf53a1e2",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "15b0cf58_2e1343d4",
+        "filename": "vars/lfDefaults.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 25,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2021-06-03T20:39:24Z",
+      "side": 1,
+      "message": "Whoops, that\u0027s definitely an oversight on my part. Switched it to jenkins-ssh, and also updated the packer version and reduced the timeout.",
+      "parentUuid": "fbbcde9d_d12d2581",
+      "range": {
+        "startLine": 25,
+        "startChar": 31,
+        "endLine": 25,
+        "endChar": 48
+      },
+      "revId": "69265fb5536f70336d6cacbe50b235edbf53a1e2",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
