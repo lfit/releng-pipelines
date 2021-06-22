@@ -16,8 +16,14 @@
 // limitations under the License.
 
 def call() {
-    sh(script: libraryResource('shell/job-cost.sh'))
-    cost_str = sh(script: "cat $WORKSPACE/archives/cost.csv | cut -d, -f6", returnStdout: true)
+    try {
+        sh(script: libraryResource('shell/job-cost.sh'))
+        cost_str = sh(script: "cat $WORKSPACE/archives/cost.csv | cut -d, -f6", returnStdout: true)
+    } catch(Exception e) {
+        // Failure in job-cost.sh should not affect the rest of the run.
+        println("Exception caught while running job-cost.sh.")
+        return
+    }
 
     lock("${BUILD_TAG}-stack-cost") {
         try {
