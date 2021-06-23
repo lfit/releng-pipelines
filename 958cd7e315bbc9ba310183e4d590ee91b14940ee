@@ -34,6 +34,24 @@
       "parentUuid": "fea9f7e6_8fdbc646",
       "revId": "958cd7e315bbc9ba310183e4d590ee91b14940ee",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "32131d22_25c601bc",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2021-06-23T18:26:58Z",
+      "side": 1,
+      "message": "I\u0027m not seeing that in the console logs for build 3. I see job-cost.sh running 3 times (as it should; once on each of the parallel nodes and then once at the end), and don\u0027t see the exception printed anywhere.",
+      "parentUuid": "82eef33f_99c4eb76",
+      "revId": "958cd7e315bbc9ba310183e4d590ee91b14940ee",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
