@@ -70,6 +70,24 @@
       "parentUuid": "32131d22_25c601bc",
       "revId": "958cd7e315bbc9ba310183e4d590ee91b14940ee",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "cf8916ff_9909efd9",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2021-06-23T20:36:21Z",
+      "side": 1,
+      "message": "Build 4 tests that the build will pass when job-cost fails. Build 3 is a normal run, and simply shows that the change didn\u0027t break the normal functionality.",
+      "parentUuid": "4303ddb9_e519ea22",
+      "revId": "958cd7e315bbc9ba310183e4d590ee91b14940ee",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
