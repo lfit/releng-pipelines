@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "fea9f7e6_8fdbc646",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2021-06-23T00:01:11Z",
+      "side": 1,
+      "message": "Tested here: https://jenkins.edgexfoundry.org/sandbox/view/All/job/sample-service-test/job/master/4/console\nI did a replay and gave the script a bad path to ensure it would fail. Job still completed and shows success, which is what we\u0027re looking for.\n\nBuild 3 also shows a run without the forced failure, where the script still runs as intended.",
+      "revId": "958cd7e315bbc9ba310183e4d590ee91b14940ee",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
