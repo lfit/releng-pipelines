@@ -52,6 +52,24 @@
       "parentUuid": "82eef33f_99c4eb76",
       "revId": "958cd7e315bbc9ba310183e4d590ee91b14940ee",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "4303ddb9_e519ea22",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-06-23T19:23:52Z",
+      "side": 1,
+      "message": "Right, but I would expect to see the exception, at least once... wouldn\u0027t you if you\u0027re properly testing it?",
+      "parentUuid": "32131d22_25c601bc",
+      "revId": "958cd7e315bbc9ba310183e4d590ee91b14940ee",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
