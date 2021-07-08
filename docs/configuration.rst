@@ -19,3 +19,12 @@ directly in Jenkinsfile, without the need for further imports. For a more
 detailed explanation of pipeline libraries, please see the
 `Jenkins Shared Library docs
 <https://www.jenkins.io/doc/book/pipeline/shared-libraries/#using-libraries>`_.
+
+Example Jenkinsfile
+-------------------
+
+Below is a simple Jenkinsfile that shows a basic implementation of the functions
+supported by this library.
+
+.. literalinclude::
+   /../Jenkinsfile.example.groovy
