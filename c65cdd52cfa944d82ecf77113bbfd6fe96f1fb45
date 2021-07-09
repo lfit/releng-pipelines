@@ -18,6 +18,24 @@
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "5641e642_20d71a2c",
+        "filename": "Jenkinsfile.example.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 45,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2021-07-09T18:31:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f1b3ff50_0df9068e",
+      "revId": "c65cdd52cfa944d82ecf77113bbfd6fe96f1fb45",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "ab8bd741_c2de71e1",
@@ -31,6 +49,24 @@
       "writtenOn": "2021-07-09T18:07:45Z",
       "side": 1,
       "message": "Please add a comment stating that this node definition should also match an available agent definition (similar to the above comment on line 22)",
+      "revId": "c65cdd52cfa944d82ecf77113bbfd6fe96f1fb45",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9465c71f_fc5a1c50",
+        "filename": "Jenkinsfile.example.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 56,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2021-07-09T18:31:25Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "ab8bd741_c2de71e1",
       "revId": "c65cdd52cfa944d82ecf77113bbfd6fe96f1fb45",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
