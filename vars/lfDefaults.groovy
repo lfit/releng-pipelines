@@ -31,6 +31,9 @@ def call(body) {
         mvnGoals: "clean install",
         mvnVersion: "mvn35",
         mvnGlobalSettings: "global-settings",
+
+        nodeDir: "",
+        nodeVersion: "14.17.5",
     ]
     return defaults
 }
