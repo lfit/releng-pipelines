@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    Add the lfNode job, which replicates the functionality of the global-jjb
+    ``node-verify`` job.

@@ -19,8 +19,10 @@ loadGlobalLibrary()
 
 pipeline {
     agent {
-        // This label should match an agent available on the target system
-        label "centos7-docker-4c-2g"
+        node {
+            // This label should match an agent available on the target system
+            label "centos7-docker-4c-2g"
+        }
     }
 
     options {
@@ -37,6 +39,11 @@ pipeline {
         stage("Java Build") {
             steps {
                 lfJava(mvnSettings=env.mvnSettings)
+            }
+        }
+        stage("Node Verify") {
+            steps {
+                lfNode()
             }
         }
         stage("Parallel Testing") {
