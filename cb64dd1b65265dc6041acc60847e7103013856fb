@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "74b0e47f_72f45a5c",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 1
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 214
+      },
+      "writtenOn": "2021-09-09T11:24:25Z",
+      "side": 1,
+      "message": "All looks ok to me, but waiting for Anil\u0027s comments also",
+      "revId": "cb64dd1b65265dc6041acc60847e7103013856fb",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
