@@ -16,6 +16,29 @@
       "message": "All looks ok to me, but waiting for Anil\u0027s comments also",
       "revId": "cb64dd1b65265dc6041acc60847e7103013856fb",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1e950a67_1888dc83",
+        "filename": "vars/lfNode.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2021-09-09T17:35:08Z",
+      "side": 1,
+      "message": "Is this something that could be overridable?",
+      "range": {
+        "startLine": 42,
+        "startChar": 26,
+        "endLine": 46,
+        "endChar": 39
+      },
+      "revId": "cb64dd1b65265dc6041acc60847e7103013856fb",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
