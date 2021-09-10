@@ -39,6 +39,30 @@
       },
       "revId": "cb64dd1b65265dc6041acc60847e7103013856fb",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "360f5f4e_6028dfb4",
+        "filename": "vars/lfNode.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 46,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2021-09-10T21:14:43Z",
+      "side": 1,
+      "message": "Upon closer review, this is leftover from the Java job, and isn\u0027t applicable to lfNode (archiveArtifacts can still be optionally set in the config, but these defaults are specific to Maven builds). I\u0027ve removed it from this job, and will push a fix to lfJava to make it overridable there.",
+      "parentUuid": "1e950a67_1888dc83",
+      "range": {
+        "startLine": 42,
+        "startChar": 26,
+        "endLine": 46,
+        "endChar": 39
+      },
+      "revId": "cb64dd1b65265dc6041acc60847e7103013856fb",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
