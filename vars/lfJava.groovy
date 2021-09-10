@@ -18,11 +18,18 @@
  * Method to run Java jobs.
  *   Required body values:
  *     * mvnSettings: Maven settings config file ID
- *   Optional body values (should be defined in lfDefaults):
- *     * javaVersion
- *     * mvnGlobalSettings
- *     * mvnGoals
- *     * mvnVersion
+ *   Optional body values:
+ *     * javaVersion (default: "openjdk11")
+ *     * mvnGlobalSettings (default: "global-settings")
+ *     * mvnGoals (default: "clean install")
+ *     * mvnVersion (default: "mvn35")
+ *     * archiveArtifacts (default:
+ *           """**\/*.log
+ *           **\/hs_err_*.log
+ *           **\/target/**\/feature.xml
+ *           **\/target/failsafe-reports/failsafe-summary.xml
+ *           *\/target/surefire-reports/*-output.txt"""
+ *       )
  *
  * @param body Config values to be provided in the form "key = value".
  */
@@ -30,6 +37,12 @@ def call(body) {
     // Evaluate the body block and collect configuration into the object
     def defaults = lfDefaults()
     def config = [:]
+    // Set default archiveArtifacts for Maven builds.
+    defaults.archiveArtifacts = """**/*.log
+**/hs_err_*.log
+**/target/**/feature.xml
+**/target/failsafe-reports/failsafe-summary.xml
+**/target/surefire-reports/*-output.txt"""
 
     if (body) {
         body.resolveStrategy = Closure.DELEGATE_FIRST
@@ -44,15 +57,6 @@ def call(body) {
         throw new Exception("Maven settings file id (mvnSettings) is " +
             "required for lfJava function.")
     }
-
-    ////////////////////////
-    // Default parameters //
-    ////////////////////////
-    archiveArtifacts = """**/*.log
-**/hs_err_*.log
-**/target/**/feature.xml
-**/target/failsafe-reports/failsafe-summary.xml
-**/target/surefire-reports/*-output.txt"""
 
     lfCommon.installPythonTools()
     lfCommon.jacocoNojava()

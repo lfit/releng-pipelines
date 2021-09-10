@@ -15,6 +15,7 @@ Parameters
     :mvnGlobalSettings: Override default global-settings filename
     :mvnGoals: String with maven goals to execute
     :mvnVersion: Maven version to use in build
+    :archiveArtifacts: Newline-separated list of paths to archive.
 
 Usage
 =====
