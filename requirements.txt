@@ -1,5 +1,4 @@
-reno~=2.11.2
-Sphinx~=2.3.1
-sphinx_bootstrap_theme~=0.7.1
+reno
+sphinx_bootstrap_theme
 sphinxcontrib-programoutput
 yq
