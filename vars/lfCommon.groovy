@@ -59,3 +59,48 @@ def sigulSignDir(signDir, signMode) {
         sh(script: libraryResource('shell/sigul-configuration-cleanup.sh'))
     }
 }
+
+/**
+ * Function to login to all needed container registries.
+ *
+ * @param settingsFile Maven settings config file ID.
+ * @param containerRegistry Local container registry.
+ * @param containerRegistryPorts Ports to use for local container registry.
+ * @param externalContainerRegistry Path to external registry (generally Docker Hub).
+ * @param dockerHubEmail Email for logging into external registry (Docker <17.06.0 only).
+ */
+
+def containerRegistryLogin(settingsFile, containerRegistry="", containerRegistryPorts="",
+         externalContainerRegistry="", dockerHubEmail="") {
+    // The LF Global JJB Docker Login script looks for information in the following variables:
+    // $SETTINGS_FILE, $DOCKER_REGISTRY, $REGISTRY_PORTS, $DOCKERHUB_REGISTRY, $DOCKERHUB_EMAIL
+    // Please refer to the shell script in global-jjb/shell for the usage.
+    // Most parameters are listed as optional, but without any of them set the script has no operation.
+    if (!settingsFile) {
+        error('Project Settings File id (settingsFile) is required for the container registry login script.')
+    }
+
+    if (containerRegistry && !containerRegistryPorts) {
+        error('Container registry ports (containerRegistryPorts) are required when registry (containerRegistry) is set.')
+    }
+
+    if (containerRegistryPorts && !containerRegistry) {
+        error('Container registry (containerRegistry) is required when registry ports (containerRegistryPorts) are set.')
+    }
+
+    if (dockerHubEmail && !externalContainerRegistry) {
+        error('External registry (externalContainerRegistry) is required when Docker Hub Email (dockerHubEmail) is set.')
+    }
+
+    def envVars = []
+    if (containerRegistry)      { envVars << "DOCKER_REGISTRY=${containerRegistry}" }
+    if (containerRegistryPorts) { envVars << "REGISTRY_PORTS=${containerRegistryPorts}" }
+    if (externalContainerRegistry)   { envVars << "DOCKERHUB_REGISTRY=${externalContainerRegistry}" }
+    if (dockerHubEmail)      { envVars << "DOCKERHUB_EMAIL=${dockerHubEmail}" }
+
+    withEnv(envVars){
+        configFileProvider([configFile(fileId: settingsFile, variable: 'SETTINGS_FILE')]) {
+            sh(script: libraryResource('global-jjb-shell/docker-login.sh'))
+        }
+    }
+}
