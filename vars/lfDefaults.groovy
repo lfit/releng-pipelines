@@ -34,6 +34,9 @@ def call(body) {
 
         nodeDir: "",
         nodeVersion: "14.17.5",
+
+        containerPublicRegistry: "docker.io",
+        containerPushRegistry: "nexus3.example.org",
     ]
     return defaults
 }

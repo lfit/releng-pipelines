@@ -59,3 +59,44 @@ def sigulSignDir(signDir, signMode) {
         sh(script: libraryResource('shell/sigul-configuration-cleanup.sh'))
     }
 }
+
+/**
+ * Function to login to all needed Docker registries.
+ *
+ * @param settingsFile Maven settings config file ID.
+ * @param dockerRegistry Local docker registry.
+ * @param dockerRegistryPorts Ports to use for local docker registry.
+ * @param dockerHubRegistry Path to external registry (generally Docker Hub).
+ * @param dockerHubEmail Email for logging into external registry (Docker <17.06.0 only).
+ */
+
+def dockerLogin(settingsFile, dockerRegistry="", dockerRegistryPorts="",
+         dockerHubRegistry="", dockerHubEmail="") {
+    // The LF Global JJB Docker Login script looks for information in the following variables:
+    // $SETTINGS_FILE, $DOCKER_REGISTRY, $REGISTRY_PORTS, $DOCKERHUB_REGISTRY, $DOCKERHUB_EMAIL
+    // Please refer to the shell script in global-jjb/shell for the usage.
+    // Most parameters are listed as optional, but without any of them set the script has no operation.
+    if (!settingsFile) {
+        error('Project Settings File id (settingsFile) is required for the docker login script.')
+    }
+
+    if (dockerRegistry && !dockerRegistryPorts) {
+        error('Docker registry ports (dockerRegistryPorts) are required when docker registry (dockerRegistry) is set.')
+    }
+
+    if (dockerRegistryPorts && !dockerRegistry) {
+        error('Docker registry (dockerRegistry) is required when docker registry ports (dockerRegistryPorts) are set.')
+    }
+
+    def envVars = []
+    if (dockerRegistry)      { envVars << "DOCKER_REGISTRY=${dockerRegistry}" }
+    if (dockerRegistryPorts) { envVars << "REGISTRY_PORTS=${dockerRegistryPorts}" }
+    if (dockerHubRegistry)   { envVars << "DOCKERHUB_REGISTRY=${dockerHubRegistry}" }
+    if (dockerHubEmail)      { envVars << "DOCKERHUB_EMAIL=${dockerHubEmail}" }
+
+    withEnv(envVars){
+        configFileProvider([configFile(fileId: settingsFile, variable: 'SETTINGS_FILE')]) {
+            sh(script: libraryResource('global-jjb-shell/docker-login.sh'))
+        }
+    }
+}
