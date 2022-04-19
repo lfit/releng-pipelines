@@ -33,6 +33,15 @@ pipeline {
     environment {
         // The settings file needs to exist on the target Jenkins system
         mvnSettings = "sandbox-settings"
+        // Optional env vars
+        DOCKER_FILE_PATH = "docker/Dockerfile.groovy"
+        DOCKER_BUILD_CONTEXT = "docker"
+        DOCKER_CUSTOM_TAGS = "stable latest"
+    }
+
+    triggers {
+        issueCommentTrigger('.*^recheck$.*')
+        issueCommentTrigger('.*^stage$.*')
     }
 
     stages {
@@ -44,6 +53,11 @@ pipeline {
         stage("Node Verify") {
             steps {
                 lfNode()
+            }
+        }
+        stage("Docker Build") {
+            steps {
+                lfDocker(mvnSettings=env.mvnSettings, project="example")
             }
         }
         stage("Parallel Testing") {

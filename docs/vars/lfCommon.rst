@@ -37,3 +37,20 @@ Signs the specified directory as a single artifact.
     :signDir: Path to directory to be signed (absolute path, or relative to
         the current working directory).
     :signMode: Serial or parallel. If left blank, the default (serial) is used.
+
+containerRegistryLogin
+----------------------
+
+Function to login to all needed Docker registries.
+
+:Required parameters:
+
+    :settingsFile: Maven settings config file ID.
+
+:Optional parameters:
+
+    :containerRegistry: Local container registry.
+    :containerRegistryPorts: Ports to use for local container registry.
+    :externalContainerRegistry: Path to external registry (generally Docker Hub).
+    :dockerHubEmail: Email for logging into external registry (Docker <17.06.0
+        only).
