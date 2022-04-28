@@ -18,6 +18,24 @@
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "93fa2428_ede4bb40",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-04-28T21:27:37Z",
+      "side": 1,
+      "message": "For the login script, that works. There\u0027s a fair amount in the main function that is actually docker-specific, so I don\u0027t think it should be changed there. If we want to support other container types in the future, it\u0027s possible that we could update that to be \"container\" focused and break out the parts that aren\u0027t Docker-specific from the ones that are, but for now, it\u0027s extremely focused on the precise workings of the Docker build process.",
+      "parentUuid": "ade5e337_d757b31a",
+      "revId": "c5076a9618d9c79bea58ab6c94a1b4ff5b6d3633",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "65be55fb_cdc15e5e",
@@ -41,6 +59,30 @@
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "959f8de2_729a954a",
+        "filename": "vars/lfCommon.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 89,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-04-28T21:27:37Z",
+      "side": 1,
+      "message": "dockerHubEmail isn\u0027t required when the registry is set (it\u0027s only needed for older versions of Docker), but you will always need a registry set if the email is there, so I\u0027ve added the second one (with updated variable names).",
+      "parentUuid": "65be55fb_cdc15e5e",
+      "range": {
+        "startLine": 87,
+        "startChar": 0,
+        "endLine": 89,
+        "endChar": 5
+      },
+      "revId": "c5076a9618d9c79bea58ab6c94a1b4ff5b6d3633",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "79eb8419_b1118a24",
@@ -54,6 +96,30 @@
       "writtenOn": "2022-04-27T16:29:40Z",
       "side": 1,
       "message": "Why is this step needed? Shouldn\u0027t it already be the jenkins:jenkins user?",
+      "range": {
+        "startLine": 95,
+        "startChar": 4,
+        "endLine": 95,
+        "endChar": 40
+      },
+      "revId": "c5076a9618d9c79bea58ab6c94a1b4ff5b6d3633",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "9b8094e4_d34f7dde",
+        "filename": "vars/lfDocker.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 95,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-04-28T21:27:37Z",
+      "side": 1,
+      "message": "I pulled this part from the EdgeX version of this, but I see it\u0027s not included in the global-jjb version. I\u0027m guessing they\u0027re doing something in the build where they might create files with a different owner. But I\u0027ll remove this here, since we\u0027re going for global-jjb compatibility.",
+      "parentUuid": "79eb8419_b1118a24",
       "range": {
         "startLine": 95,
         "startChar": 4,
