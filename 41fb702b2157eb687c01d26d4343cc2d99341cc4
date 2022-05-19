@@ -1,0 +1,72 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "99c32808_fb0ebb79",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2022-05-19T17:47:22Z",
+      "side": 1,
+      "message": "The global-jjb module update, while it may be a dependency, should be done as a separate change. You can depend upon it.",
+      "revId": "41fb702b2157eb687c01d26d4343cc2d99341cc4",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "28aa4e62_a569d340",
+        "filename": "docs/vars/lfDocker.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2022-05-19T17:47:22Z",
+      "side": 1,
+      "message": "If we don\u0027t have some sort of auto-doc build from Groovdoc(?) then we need build out the docs on all the functions available here.",
+      "revId": "41fb702b2157eb687c01d26d4343cc2d99341cc4",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "f907a566_a39d4cd5",
+        "filename": "vars/lfDocker.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2022-05-19T17:47:22Z",
+      "side": 1,
+      "message": "Need comment docs",
+      "revId": "41fb702b2157eb687c01d26d4343cc2d99341cc4",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "7784d025_091b60d0",
+        "filename": "vars/lfDocker.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2022-05-19T17:47:22Z",
+      "side": 1,
+      "message": "Need comment docs",
+      "revId": "41fb702b2157eb687c01d26d4343cc2d99341cc4",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
