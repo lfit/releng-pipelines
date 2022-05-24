@@ -18,6 +18,24 @@
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "c529d4a5_0aa28277",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-05-24T19:13:34Z",
+      "side": 1,
+      "message": "Done.",
+      "parentUuid": "99c32808_fb0ebb79",
+      "revId": "41fb702b2157eb687c01d26d4343cc2d99341cc4",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "28aa4e62_a569d340",
@@ -31,6 +49,24 @@
       "writtenOn": "2022-05-19T17:47:22Z",
       "side": 1,
       "message": "If we don\u0027t have some sort of auto-doc build from Groovdoc(?) then we need build out the docs on all the functions available here.",
+      "revId": "41fb702b2157eb687c01d26d4343cc2d99341cc4",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "635e3df1_9eb691b6",
+        "filename": "docs/vars/lfDocker.rst",
+        "patchSetId": 4
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-05-24T19:13:34Z",
+      "side": 1,
+      "message": "I tried out the Groovydocs, but besides being an incompatible format, they just weren\u0027t really rendering how I would like (most of the details were missing, despite the fact that these comments are specifically based on Groovydoc formatting). I\u0027d definitely like to come back to that at some point, and potentially solve those issues and have all docs auto-generated, but for now, I\u0027ve just added the docs manually.",
+      "parentUuid": "28aa4e62_a569d340",
       "revId": "41fb702b2157eb687c01d26d4343cc2d99341cc4",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     },
@@ -52,6 +88,24 @@
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "79334223_5d09e35c",
+        "filename": "vars/lfDocker.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 124,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-05-24T19:13:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "f907a566_a39d4cd5",
+      "revId": "41fb702b2157eb687c01d26d4343cc2d99341cc4",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "7784d025_091b60d0",
@@ -65,6 +119,24 @@
       "writtenOn": "2022-05-19T17:47:22Z",
       "side": 1,
       "message": "Need comment docs",
+      "revId": "41fb702b2157eb687c01d26d4343cc2d99341cc4",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "8ac9e7f5_185650c0",
+        "filename": "vars/lfDocker.groovy",
+        "patchSetId": 4
+      },
+      "lineNbr": 149,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-05-24T19:13:34Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "7784d025_091b60d0",
       "revId": "41fb702b2157eb687c01d26d4343cc2d99341cc4",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
