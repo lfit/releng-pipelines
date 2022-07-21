@@ -34,32 +34,36 @@
  * @param body Config values to be provided in the form "key = value".
  */
 def call(body) {
+    println "Printing body1:  $body"
     // Evaluate the body block and collect configuration into the object
     def defaults = lfDefaults()
-    def config = [:]
+    def config = [:] //creating an empty map
+
     // Set default archiveArtifacts for Maven builds.
     defaults.archiveArtifacts = """**/*.log
 **/hs_err_*.log
 **/target/**/feature.xml
 **/target/failsafe-reports/failsafe-summary.xml
 **/target/surefire-reports/*-output.txt"""
+    defaults.mvnSettings = "$body.mvnSettings"
 
-    if (body) {
-        body.resolveStrategy = Closure.DELEGATE_FIRST
-        body.delegate = config
-        body()
-    }
+    // if (body) {
+    //     println "body.resolveStrategy :  $body.resolveStrategy "
+    //     body.resolveStrategy = Closure.DELEGATE_FIRST
+    //     println "body.delegate :  $body.delegate "
+    //     body.delegate = config
+    //     body()
+    // }
 
     // For duplicate keys, Groovy will use the right hand map's values.
     config = defaults + config
+
+    println "Printing final config:  $config"
 
     if (!config.mvnSettings) {
         throw new Exception("Maven settings file id (mvnSettings) is " +
             "required for lfJava function.")
     }
-
-    lfCommon.installPythonTools()
-    lfCommon.jacocoNojava()
 
     withMaven(
         maven: config.mvnVersion,
@@ -67,6 +71,10 @@ def call(body) {
         mavenSettingsConfig: config.mvnSettings,
         globalMavenSettingsConfig: config.mvnGlobalSettings,
     ) {
+        sh 'echo JAVA_HOME="/w/tools/hudson.model.JDK/jdk17/jdk-17.0.4/" > env.JAVA_HOME'
+        environment {
+               JAVA_HOME = sh(script: "/w/tools/hudson.model.JDK/jdk17/jdk-17.0.4/", , returnStdout: true).trim()
+           }
         sh "mvn ${config.mvnGoals}"
     }
 
@@ -87,6 +95,8 @@ def mavenDeploy(config) {
         libraryResource('shell/common-variables.sh'),
         libraryResource('shell/maven-deploy.sh')
     ].join("\n")
+
+    sh "echo deployScript= $deployScript"
 
     withMaven(
         maven: config.mvnVersion,

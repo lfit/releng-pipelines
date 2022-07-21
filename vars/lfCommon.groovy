@@ -20,6 +20,7 @@
 
 // Replaces lf-infra-pre-build
 def installPythonTools() {
+    sh "echo start installpythontools from lfcommon"
     sh(script: libraryResource('shell/python-tools-install.sh'))
 }
 
