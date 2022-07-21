@@ -34,32 +34,49 @@
  * @param body Config values to be provided in the form "key = value".
  */
 def call(body) {
+    println "Printing body1:  $body"
+    println "Printing body.mvnSettings:  $body.mvnSettings"
     // Evaluate the body block and collect configuration into the object
     def defaults = lfDefaults()
-    def config = [:]
+    println "Printing defaults:  $defaults"
+    def config = [:] //creating an empty map
+
     // Set default archiveArtifacts for Maven builds.
     defaults.archiveArtifacts = """**/*.log
 **/hs_err_*.log
 **/target/**/feature.xml
 **/target/failsafe-reports/failsafe-summary.xml
 **/target/surefire-reports/*-output.txt"""
+    defaults.mvnSettings = "$body.mvnSettings"
 
-    if (body) {
-        body.resolveStrategy = Closure.DELEGATE_FIRST
-        body.delegate = config
-        body()
-    }
+    // if (body) {
+    //     println "body.resolveStrategy :  $body.resolveStrategy "
+    //     body.resolveStrategy = Closure.DELEGATE_FIRST
+    //     println "body.delegate :  $body.delegate "
+    //     body.delegate = config
+    //     body()
+    // }
 
     // For duplicate keys, Groovy will use the right hand map's values.
     config = defaults + config
+    println "Printing final config:  $config"
 
     if (!config.mvnSettings) {
         throw new Exception("Maven settings file id (mvnSettings) is " +
             "required for lfJava function.")
     }
 
-    lfCommon.installPythonTools()
-    lfCommon.jacocoNojava()
+    // sh "echo starting pythontools"
+    // lfCommon.installPythonTools()
+    // lfCommon.jacocoNojava()
+    // lfCommon.updateJavaAlternatives("jdk17")
+    // sh 'rpm -aq | grep -i jdk'    
+    // sh "java -version"
+    // sh 'printenv'
+    // // sh 'echo JAVA_HOME="$JAVA_HOME"'
+    // // sh 'ls -la $JAVA_HOME'
+    // sh 'which java'
+    sh "echo JAVA_HOME=$JAVA_HOME"
 
     withMaven(
         maven: config.mvnVersion,
@@ -67,6 +84,12 @@ def call(body) {
         mavenSettingsConfig: config.mvnSettings,
         globalMavenSettingsConfig: config.mvnGlobalSettings,
     ) {
+        sh 'ls -la /w/tools/hudson.model.JDK/jdk17/jdk-17.0.4/'
+        sh 'echo JAVA_HOME="/w/tools/hudson.model.JDK/jdk17/jdk-17.0.4/" > env.JAVA_HOME'
+        environment {
+               JAVA_HOME = sh(script: "/w/tools/hudson.model.JDK/jdk17/jdk-17.0.4/", , returnStdout: true).trim()
+           }
+        sh "echo JAVA_HOME=$JAVA_HOME"
         sh "mvn ${config.mvnGoals}"
     }
 
