@@ -26,10 +26,10 @@ def call(body) {
         buildDaysToKeep: 30,
         buildTimeout: 60,
         archiveArtifacts: "",
-        javaVersion: "openjdk11",
+        javaVersion: "jdk17",
 
         mvnGoals: "clean install",
-        mvnVersion: "mvn35",
+        mvnVersion: "mvn38",
         mvnGlobalSettings: "global-settings",
 
         nodeDir: "",
