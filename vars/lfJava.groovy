@@ -35,7 +35,9 @@
  */
 def call(body) {
     // Evaluate the body block and collect configuration into the object
+    echo "begin lfJava() defaults"
     def defaults = lfDefaults()
+    echo "begin lfJava() config"
     def config = [:]
     // Set default archiveArtifacts for Maven builds.
     defaults.archiveArtifacts = """**/*.log
@@ -43,7 +45,7 @@ def call(body) {
 **/target/**/feature.xml
 **/target/failsafe-reports/failsafe-summary.xml
 **/target/surefire-reports/*-output.txt"""
-
+    echo defaults
     if (body) {
         body.resolveStrategy = Closure.DELEGATE_FIRST
         body.delegate = config
