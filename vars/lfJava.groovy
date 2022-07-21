@@ -43,6 +43,7 @@ def call(body) {
 **/target/**/feature.xml
 **/target/failsafe-reports/failsafe-summary.xml
 **/target/surefire-reports/*-output.txt"""
+    defaults.mvnSettings = "$body.mvnSettings"
 
     if (body) {
         body.resolveStrategy = Closure.DELEGATE_FIRST
