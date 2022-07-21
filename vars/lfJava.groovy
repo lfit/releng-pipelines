@@ -52,6 +52,7 @@ def call(body) {
 
     // For duplicate keys, Groovy will use the right hand map's values.
     config = defaults + config
+    sh "cat config"
 
     if (!config.mvnSettings) {
         throw new Exception("Maven settings file id (mvnSettings) is " +
