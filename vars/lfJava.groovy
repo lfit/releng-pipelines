@@ -35,7 +35,9 @@
  */
 def call(body) {
     // Evaluate the body block and collect configuration into the object
+    echo "begin lfJava() defaults"
     def defaults = lfDefaults()
+    echo "begin lfJava() config"
     def config = [:]
     // Set default archiveArtifacts for Maven builds.
     defaults.archiveArtifacts = """**/*.log
