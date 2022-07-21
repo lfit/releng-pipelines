@@ -36,22 +36,26 @@
 def call(body) {
     // Evaluate the body block and collect configuration into the object
     def defaults = lfDefaults()
-    def config = [:]
+    def config = body
     // Set default archiveArtifacts for Maven builds.
     defaults.archiveArtifacts = """**/*.log
 **/hs_err_*.log
 **/target/**/feature.xml
 **/target/failsafe-reports/failsafe-summary.xml
 **/target/surefire-reports/*-output.txt"""
+    // defaults.mvnSettings = "$body.mvnSettings"
 
-    if (body) {
-        body.resolveStrategy = Closure.DELEGATE_FIRST
-        body.delegate = config
-        body()
-    }
+    // if (body) {
+    //     body.resolveStrategy = Closure.DELEGATE_FIRST
+    //     body.delegate = config
+    //     println "printing body: $body"
+    //     body()
+    // }
 
     // For duplicate keys, Groovy will use the right hand map's values.
     config = defaults + config
+
+    println "config: $config"
 
     if (!config.mvnSettings) {
         throw new Exception("Maven settings file id (mvnSettings) is " +
@@ -60,14 +64,15 @@ def call(body) {
 
     lfCommon.installPythonTools()
     lfCommon.jacocoNojava()
+    lfCommon.updateJavaAlternatives("jdk17")
 
     withMaven(
         maven: config.mvnVersion,
-        jdk: config.javaVersion,
+        // jdk: config.javaVersion,
         mavenSettingsConfig: config.mvnSettings,
         globalMavenSettingsConfig: config.mvnGlobalSettings,
     ) {
-        sh "mvn ${config.mvnGoals}"
+        sh "mvn ${config.mvnGoals} -e -DaltDeploymentRepository=staging::default::file:${WORKSPACE}/m2repo"
     }
 
     if (env.GIT_BRANCH == "main" || env.GIT_BRANCH == "master") {
