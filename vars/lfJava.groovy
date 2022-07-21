@@ -43,12 +43,13 @@ def call(body) {
 **/target/**/feature.xml
 **/target/failsafe-reports/failsafe-summary.xml
 **/target/surefire-reports/*-output.txt"""
+    defaults.mvnSettings = "$body.mvnSettings"
 
-    if (body) {
-        body.resolveStrategy = Closure.DELEGATE_FIRST
-        body.delegate = config
-        body()
-    }
+    // if (body) {
+    //     body.resolveStrategy = Closure.DELEGATE_FIRST
+    //     body.delegate = config
+    //     body()
+    // }
 
     // For duplicate keys, Groovy will use the right hand map's values.
     config = defaults + config
