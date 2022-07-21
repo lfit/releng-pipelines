@@ -43,10 +43,12 @@ def call(body) {
 **/target/**/feature.xml
 **/target/failsafe-reports/failsafe-summary.xml
 **/target/surefire-reports/*-output.txt"""
+    // defaults.mvnSettings = "$body.mvnSettings"
 
     if (body) {
         body.resolveStrategy = Closure.DELEGATE_FIRST
         body.delegate = config
+        println "printing body: $body"
         body()
     }
 
@@ -60,6 +62,7 @@ def call(body) {
 
     lfCommon.installPythonTools()
     lfCommon.jacocoNojava()
+    lfCommon.updateJavaAlternatives("jdk17")
 
     withMaven(
         maven: config.mvnVersion,
