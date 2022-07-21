@@ -36,6 +36,7 @@
 def call(body) {
     // Evaluate the body block and collect configuration into the object
     def defaults = lfDefaults()
+    echo "begin lfJava() config"
     def config = [:]
     // Set default archiveArtifacts for Maven builds.
     defaults.archiveArtifacts = """**/*.log
@@ -52,12 +53,15 @@ def call(body) {
 
     // For duplicate keys, Groovy will use the right hand map's values.
     config = defaults + config
+    sh "echo config"
+    sh "echo $config"
 
     if (!config.mvnSettings) {
         throw new Exception("Maven settings file id (mvnSettings) is " +
             "required for lfJava function.")
     }
 
+    sh "echo starting pythontools"
     lfCommon.installPythonTools()
     lfCommon.jacocoNojava()
 
