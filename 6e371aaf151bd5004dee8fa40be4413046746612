@@ -1,0 +1,7 @@
+Verified+1: EdgeX Jenkins <releng+edgex-jenkins@linuxfoundation.org>
+Code-Review+2: Bengt Thuree <bthuree@linuxfoundation.org>
+Submitted-by: Anil Belur <abelur@linuxfoundation.org>
+Submitted-at: Tue, 26 Jul 2022 23:07:10 +0000
+Reviewed-on: https://gerrit.linuxfoundation.org/infra/c/releng/pipelines/+/70414
+Project: releng/pipelines
+Branch: refs/heads/master
