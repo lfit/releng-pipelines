@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "41d84314_a870ac94",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 12
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-07-27T06:36:35Z",
+      "side": 1,
+      "message": "Mario: To test pipelines, there is no need to submit a change to the upstream releng-pipelines repo.\nInstead on your job on sandbox use the \"Replay\" button on your job -\u003e edit/modify the changes there which you can \"run\" straight away, that\u0027s a much easier route for testing pipelines compared to this. :-))",
+      "revId": "09bdf028aa1c982fdf15d80e2ea54e508448ea7a",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
