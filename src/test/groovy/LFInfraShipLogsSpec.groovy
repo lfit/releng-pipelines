@@ -24,7 +24,8 @@ public class LFInfraShipLogsSpec extends JenkinsPipelineSpecification {
     def setup() {
         lfInfraShipLogs = loadPipelineScriptForTest('vars/lfInfraShipLogs.groovy')
         explicitlyMockPipelineVariable('lfCommon')
-	explicitlyMockPipelineVariable('HOME')
+        explicitlyMockPipelineVariable('HOME')
+        explicitlyMockPipelineVariable("GERRIT_URL")
     }
 
     def "Test lfInfraShipLogs [Should] throw exception [When] logSettingsFile is null" () {
@@ -62,6 +63,7 @@ public class LFInfraShipLogsSpec extends JenkinsPipelineSpecification {
             getPipelineMock("lfCommon.installPythonTools").call(_) >> null
         when: 'Only LOGS_SERVER defined'
             lfInfraShipLogs.getBinding().setVariable('LOGS_SERVER', 'MyLogServer')
+            lfInfraShipLogs.getBinding().setVariable('JOB_NAME', 'MyJobName')
             lfInfraShipLogs.getBinding().setVariable('S3_BUCKET', '')
             // currentBuild needs to be reset for each test, so that it does not
             // carry over values between tests.

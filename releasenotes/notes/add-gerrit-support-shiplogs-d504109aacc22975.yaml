@@ -1,0 +1,5 @@
+---
+features:
+  - |
+    Add Gerrit support for lfInfraShiplogs.groovy and allow logs
+    to be pushed to AWS S3 bucket.
