@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "13a6fc73_001f21d1",
+        "filename": "src/test/groovy/LFInfraShipLogsSpec.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-08-05T19:00:29Z",
+      "side": 1,
+      "message": "This should be spaces rather than a tab.",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 1
+      },
+      "revId": "6c5b7050182c72da20867ed36ba778694b7d1eba",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
