@@ -24,6 +24,7 @@ public class LFInfraShipLogsSpec extends JenkinsPipelineSpecification {
     def setup() {
         lfInfraShipLogs = loadPipelineScriptForTest('vars/lfInfraShipLogs.groovy')
         explicitlyMockPipelineVariable('lfCommon')
+	explicitlyMockPipelineVariable('HOME')
     }
 
     def "Test lfInfraShipLogs [Should] throw exception [When] logSettingsFile is null" () {

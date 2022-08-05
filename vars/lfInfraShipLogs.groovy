@@ -69,7 +69,7 @@ def call(body) {
             if ("$S3_BUCKET" =~ /.*logs-s3.*/) {
                 // If S3_BUCKET is defined, we need the config file
                 configFileProvider([configFile(fileId: "jenkins-s3-log-ship",
-                    targetLocation: '$HOME/.aws/credentials')]) {
+                    targetLocation: "$HOME/.aws/credentials")]) {
                     echo 'Running shell/logs-deploy.sh'
                     sh(script: libraryResource('shell/logs-deploy.sh'))
                 }
