@@ -66,23 +66,27 @@ def call(body) {
 
             buildDesc = ""
 
+            // Override the $JOB_NAME to replace the URL encodings in the Gerrit change-no path
+            // which use '/' instead of '%2F' in the log URL.
+            if ("$GERRIT_URL" != "") {
+                env.JOB_NAME = sh(script: 'echo ${WORKSPACE##/*/}', returnStdout: true).toString().trim()
+            }
+
+            // Upload to S3 Bucket exists
             if ("$S3_BUCKET" =~ /.*logs-s3.*/) {
                 // If S3_BUCKET is defined, we need the config file
                 configFileProvider([configFile(fileId: "jenkins-s3-log-ship",
                     targetLocation: "$HOME/.aws/credentials")]) {
-                    echo 'Running shell/logs-deploy.sh'
+                    echo "Running shell/logs-deploy.sh to AWS S3"
                     sh(script: libraryResource('shell/logs-deploy.sh'))
                 }
-                s3_path = "logs/${SILO}/${JENKINS_HOSTNAME}/${JOB_NAME}/${BUILD_NUMBER}/"
+                s3_path = "logs/${SILO}/${JENKINS_HOSTNAME}/${env.JOB_NAME}/${BUILD_NUMBER}/"
                 buildDesc += "S3 build logs: <a href=\"https://$CDN_URL/$s3_path\">https://$CDN_URL/$s3_path</a>\n"
-                // If LOGS_SERVER is also defined, logs-deploy.sh will deploy to both
-                if ("$LOGS_SERVER" != "") {
-                    nexus_path = "${SILO}/${JENKINS_HOSTNAME}/${JOB_NAME}/${BUILD_NUMBER}"
-                    buildDesc += "Nexus build logs: <a href=\"$LOGS_SERVER/" +
-                        "$nexus_path\">$LOGS_SERVER/$nexus_path</a>\n"
-                }
-            } else {  // Only LOGS_SERVER is defined
-                echo 'Running shell/logs-deploy.sh'
+            }
+
+            // Upload to Nexus logs server
+            if ("$LOGS_SERVER" != "") {
+                echo "Running shell/logs-deploy.sh to Nexus logs server"
                 sh(script: libraryResource('shell/logs-deploy.sh'))
                 nexus_path = "${SILO}/${JENKINS_HOSTNAME}/${JOB_NAME}/${BUILD_NUMBER}"
                 buildDesc += "Nexus build logs: <a href=\"$LOGS_SERVER/" +
