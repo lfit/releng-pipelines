@@ -1,0 +1,4 @@
+---
+fixes:
+  - |
+    Add S3 URL in href for S3 logs shipping
