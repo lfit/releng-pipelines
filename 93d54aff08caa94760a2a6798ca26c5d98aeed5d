@@ -24,6 +24,30 @@
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "59baf7de_f64a00ed",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-08-08T22:48:00Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "04a8aa00_3cea47ee",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 40
+      },
+      "revId": "93d54aff08caa94760a2a6798ca26c5d98aeed5d",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "92a8a489_65ad3821",
@@ -47,6 +71,30 @@
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     },
     {
+      "unresolved": false,
+      "key": {
+        "uuid": "1d779fd5_758b8dfe",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-08-08T22:48:00Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "92a8a489_65ad3821",
+      "range": {
+        "startLine": 77,
+        "startChar": 16,
+        "endLine": 79,
+        "endChar": 0
+      },
+      "revId": "93d54aff08caa94760a2a6798ca26c5d98aeed5d",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
       "unresolved": true,
       "key": {
         "uuid": "bd152c26_422a50e3",
@@ -60,6 +108,30 @@
       "writtenOn": "2022-08-08T13:31:59Z",
       "side": 1,
       "message": "As above, we don\u0027t want to run this after the build description is set. It should run first, so that if it fails the link isn\u0027t added.",
+      "range": {
+        "startLine": 93,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 67
+      },
+      "revId": "93d54aff08caa94760a2a6798ca26c5d98aeed5d",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4b74cd8e_fa02c61a",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-08-08T22:48:00Z",
+      "side": 1,
+      "message": "Ack",
+      "parentUuid": "bd152c26_422a50e3",
       "range": {
         "startLine": 93,
         "startChar": 0,
