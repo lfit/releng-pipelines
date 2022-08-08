@@ -1,0 +1,73 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "04a8aa00_3cea47ee",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 75,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-08-08T13:31:59Z",
+      "side": 1,
+      "message": "Tab rather than spaces. I saw this in another one of your changes; you may need to adjust the settings in the editor you\u0027re using for Groovy files.\n\nAlso looks like there\u0027s a typo/missing word here. I\u0027m guessing it was meant to be something like \"Upload to S3 if bucket exists\".",
+      "range": {
+        "startLine": 75,
+        "startChar": 0,
+        "endLine": 75,
+        "endChar": 40
+      },
+      "revId": "93d54aff08caa94760a2a6798ca26c5d98aeed5d",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "92a8a489_65ad3821",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 79,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-08-08T13:31:59Z",
+      "side": 1,
+      "message": "We don\u0027t want to add this to the build description unless it is successful, which is why the buildDesc+\u003d line goes after the shell script runs. With this setup, we can have a broken link in the description.",
+      "range": {
+        "startLine": 77,
+        "startChar": 16,
+        "endLine": 79,
+        "endChar": 0
+      },
+      "revId": "93d54aff08caa94760a2a6798ca26c5d98aeed5d",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "bd152c26_422a50e3",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 1
+      },
+      "lineNbr": 94,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-08-08T13:31:59Z",
+      "side": 1,
+      "message": "As above, we don\u0027t want to run this after the build description is set. It should run first, so that if it fails the link isn\u0027t added.",
+      "range": {
+        "startLine": 93,
+        "startChar": 0,
+        "endLine": 94,
+        "endChar": 67
+      },
+      "revId": "93d54aff08caa94760a2a6798ca26c5d98aeed5d",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
