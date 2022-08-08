@@ -1,0 +1,27 @@
+{
+  "comments": [
+    {
+      "unresolved": true,
+      "key": {
+        "uuid": "1258d9ef_c517f79c",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 192
+      },
+      "writtenOn": "2022-08-08T13:21:07Z",
+      "side": 1,
+      "message": "I don\u0027t think we want quotes around this part. They aren\u0027t present in the global-jjb version, and having the link quoted would be pretty unusual.",
+      "range": {
+        "startLine": 77,
+        "startChar": 83,
+        "endLine": 77,
+        "endChar": 112
+      },
+      "revId": "04c036271c392a940eef85c83c141391a61df385",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
