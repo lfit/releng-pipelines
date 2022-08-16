@@ -22,6 +22,30 @@
       },
       "revId": "04c036271c392a940eef85c83c141391a61df385",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "4cc21ac3_32fb6711",
+        "filename": "vars/lfInfraShipLogs.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 77,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2022-08-16T23:04:22Z",
+      "side": 1,
+      "message": "Done",
+      "parentUuid": "1258d9ef_c517f79c",
+      "range": {
+        "startLine": 77,
+        "startChar": 83,
+        "endLine": 77,
+        "endChar": 112
+      },
+      "revId": "04c036271c392a940eef85c83c141391a61df385",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
