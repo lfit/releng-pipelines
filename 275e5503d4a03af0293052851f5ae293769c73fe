@@ -1,0 +1,21 @@
+{
+  "comments": [
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a23ec911_98a60959",
+        "filename": "/PATCHSET_LEVEL",
+        "patchSetId": 2
+      },
+      "lineNbr": 0,
+      "author": {
+        "id": 1
+      },
+      "writtenOn": "2022-08-22T16:57:11Z",
+      "side": 1,
+      "message": "If by \"merge\" you\u0027re trying to get #70402 up to date with what\u0027s on master the proper procedure is to rebase _that_ change, not propose a new change on top of it to get you up to date.",
+      "revId": "275e5503d4a03af0293052851f5ae293769c73fe",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    }
+  ]
+}
