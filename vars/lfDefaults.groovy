@@ -28,7 +28,7 @@ def call(body) {
         archiveArtifacts: "",
         javaVersion: "jdk17",
 
-        mvnGoals: "clean install",
+        mvnGoals: "clean deploy",
         mvnVersion: "mvn38",
         mvnGlobalSettings: "global-settings",
 

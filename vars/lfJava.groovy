@@ -64,7 +64,7 @@ def call(body) {
 
     withMaven(
         maven: config.mvnVersion,
-        jdk: config.javaVersion,
+        // jdk: config.javaVersion,
         mavenSettingsConfig: config.mvnSettings,
         globalMavenSettingsConfig: config.mvnGlobalSettings,
     ) {

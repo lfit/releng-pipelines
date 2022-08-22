@@ -1,0 +1,5 @@
+---
+fixes:
+  - |
+    Add S3 URL in href as required to display the AWS S3 logs
+    from the jobs description.
