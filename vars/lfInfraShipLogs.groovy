@@ -69,12 +69,12 @@ def call(body) {
             if ("$S3_BUCKET" =~ /.*logs-s3.*/) {
                 // If S3_BUCKET is defined, we need the config file
                 configFileProvider([configFile(fileId: "jenkins-s3-log-ship",
-                    targetLocation: '$HOME/.aws/credentials')]) {
+                    targetLocation: "$HOME/.aws/credentials")]) {
                     echo 'Running shell/logs-deploy.sh'
                     sh(script: libraryResource('shell/logs-deploy.sh'))
                 }
                 s3_path = "logs/${SILO}/${JENKINS_HOSTNAME}/${JOB_NAME}/${BUILD_NUMBER}/"
-                buildDesc += "S3 build logs: <a href=\"https://$CDN_URL/$s3_path\"></a>\n"
+                buildDesc += "S3 build logs: <a href=\"https://$CDN_URL/$s3_path\">https://$CDN_URL/$s3_path</a>\n"
                 // If LOGS_SERVER is also defined, logs-deploy.sh will deploy to both
                 if ("$LOGS_SERVER" != "") {
                     nexus_path = "${SILO}/${JENKINS_HOSTNAME}/${JOB_NAME}/${BUILD_NUMBER}"
