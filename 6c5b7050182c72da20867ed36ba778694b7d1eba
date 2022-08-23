@@ -22,6 +22,30 @@
       },
       "revId": "6c5b7050182c72da20867ed36ba778694b7d1eba",
       "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
+    },
+    {
+      "unresolved": false,
+      "key": {
+        "uuid": "a402c380_4ccd706c",
+        "filename": "src/test/groovy/LFInfraShipLogsSpec.groovy",
+        "patchSetId": 2
+      },
+      "lineNbr": 27,
+      "author": {
+        "id": 29
+      },
+      "writtenOn": "2022-08-23T07:56:20Z",
+      "side": 1,
+      "message": "this is being addressed here, but the change is stuck on test issues, I\u0027m not able to resolve. Eric, can you look into this please?\n\nhttps://gerrit.linuxfoundation.org/infra/c/releng/pipelines/+/70443/3/src/test/groovy/LFInfraShipLogsSpec.groovy",
+      "parentUuid": "13a6fc73_001f21d1",
+      "range": {
+        "startLine": 27,
+        "startChar": 0,
+        "endLine": 27,
+        "endChar": 1
+      },
+      "revId": "6c5b7050182c72da20867ed36ba778694b7d1eba",
+      "serverId": "f2a2391d-0403-4fa5-b183-4056999a8a09"
     }
   ]
 }
