@@ -20,7 +20,7 @@ loadGlobalLibrary()
 
 pipeline {
     agent {
-        label 'centos7-docker-4c-2g'
+        label 'centos7-docker-4c-4g'
     }
 
     options {
